@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+}
+
+/* CONTENEDOR */
+.page {
+  padding: 20px;
+}
+
+/* GRID PRODUCTOS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* BOTONES PRODUCTO */
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* COLORES POR TIPO */
+.card:nth-child(1) { background: #dbeafe; } /* agua */
+.card:nth-child(2) { background: #fef3c7; } /* refresco */
+.card:nth-child(3) { background: #fde68a; } /* zumo */
+.card:nth-child(4) { background: #fcd34d; } /* café */
+.card:nth-child(5) { background: #fbbf24; } /* café leche */
+.card:nth-child(6) { background: #fde68a; } /* infusión */
+.card:nth-child(7) { background: #fecaca; } /* cerveza */
+.card:nth-child(8) { background: #fca5a5; } /* vino */
+
+/* TEXTO */
+.card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.card b {
+  font-size: 22px;
+}
+
+/* STOCK */
+.card small {
+  display: block;
+  margin-top: 5px;
+}
+
+/* ALERTAS */
+.card.low {
+  border: 3px solid orange;
+}
+
+.card.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* CAJA DERECHA */
+.box {
+  background: white;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* BOTONES */
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.ok {
+  background: green;
+  color: white;
+}
+
+/* MODAL QR */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
