@@ -1,9 +1,0 @@
-body{margin:0;font-family:Arial;background:#eef2f7}
-.page{padding:20px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.card{padding:20px;border-radius:20px;text-align:center;font-weight:bold;cursor:pointer;color:white}
-.card:nth-child(1){background:#3b82f6}
-.card:nth-child(2){background:#f59e0b}
-.card:nth-child(3){background:#dc2626}
-.box{background:white;padding:15px;border-radius:15px;margin-top:10px}
-.total{background:black;color:white;padding:10px;border-radius:10px;margin-top:10px}
