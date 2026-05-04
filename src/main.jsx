@@ -16,8 +16,6 @@ import {
 
 import { QRCodeCanvas } from "qrcode.react";
 
-import "./styles.css";
-
 /* =========================
 
    👥 TRABAJADORES (tus nombres)
