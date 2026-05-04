@@ -1,6 +1,7 @@
+/* ===== BASE ===== */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Arial;
   background: #eef2f7;
 }
 
@@ -9,91 +10,130 @@ body {
   padding: 20px;
 }
 
-/* GRID PRODUCTOS */
+/* ===== GRID TPV ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 18px;
 }
 
-/* BOTONES PRODUCTO */
+/* ===== BOTONES TPV ===== */
 .card {
-  background: white;
-  border-radius: 18px;
+  border-radius: 22px;
   padding: 20px;
   cursor: pointer;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   text-align: center;
-  transition: 0.2s;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 140px;
 }
 
+/* EFECTO CLICK */
+.card:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* HOVER */
 .card:hover {
   transform: scale(1.05);
 }
 
-/* COLORES POR TIPO */
-.card:nth-child(1) { background: #dbeafe; } /* agua */
-.card:nth-child(2) { background: #fef3c7; } /* refresco */
-.card:nth-child(3) { background: #fde68a; } /* zumo */
-.card:nth-child(4) { background: #fcd34d; } /* café */
-.card:nth-child(5) { background: #fbbf24; } /* café leche */
-.card:nth-child(6) { background: #fde68a; } /* infusión */
-.card:nth-child(7) { background: #fecaca; } /* cerveza */
-.card:nth-child(8) { background: #fca5a5; } /* vino */
+/* ===== COLORES POR PRODUCTO ===== */
+.card:nth-child(1) { background: linear-gradient(135deg, #60a5fa, #3b82f6); color: white; }
+.card:nth-child(2) { background: linear-gradient(135deg, #fbbf24, #f59e0b); }
+.card:nth-child(3) { background: linear-gradient(135deg, #fde68a, #facc15); }
+.card:nth-child(4) { background: linear-gradient(135deg, #c084fc, #9333ea); color: white; }
+.card:nth-child(5) { background: linear-gradient(135deg, #a78bfa, #7c3aed); color: white; }
+.card:nth-child(6) { background: linear-gradient(135deg, #fcd34d, #f59e0b); }
+.card:nth-child(7) { background: linear-gradient(135deg, #f87171, #dc2626); color: white; }
+.card:nth-child(8) { background: linear-gradient(135deg, #fb7185, #be123c); color: white; }
 
 /* TEXTO */
 .card h3 {
   margin: 10px 0;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .card b {
-  font-size: 22px;
+  font-size: 26px;
 }
 
 /* STOCK */
 .card small {
-  display: block;
-  margin-top: 5px;
+  font-size: 12px;
+  opacity: 0.8;
 }
 
-/* ALERTAS */
+/* ===== ALERTAS ===== */
 .card.low {
-  border: 3px solid orange;
+  border: 4px solid orange;
 }
 
 .card.disabled {
-  background: #ccc;
+  background: #ccc !important;
+  color: #666;
   cursor: not-allowed;
 }
 
-/* CAJA DERECHA */
+/* ===== CAJAS LATERALES ===== */
 .box {
   background: white;
-  padding: 15px;
+  padding: 18px;
   margin-top: 15px;
+  border-radius: 18px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* TITULOS */
+.box h2 {
+  margin-top: 0;
+}
+
+/* LISTAS */
+.line {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+/* TOTAL */
+.total {
+  background: black;
+  color: white;
+  padding: 15px;
   border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.total b {
+  font-size: 28px;
 }
 
 /* BOTONES */
 button {
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 10px;
-  cursor: pointer;
+  font-weight: bold;
 }
 
 .ok {
-  background: green;
+  background: #16a34a;
   color: white;
 }
 
-/* MODAL QR */
+/* ===== MODAL QR ===== */
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +141,19 @@ button {
 
 .panel {
   background: white;
-  padding: 20px;
-  border-radius: 20px;
+  padding: 25px;
+  border-radius: 25px;
   text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.panel strong {
+  font-size: 36px;
+}
+
+/* ===== RESPONSIVE TABLET ===== */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
