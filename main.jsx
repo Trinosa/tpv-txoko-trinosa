@@ -4,7 +4,7 @@ import{createRoot}from'react-dom/client';
 import{QRCodeCanvas}from'qrcode.react';
 
 const EMPLEADOS=[
-"Manuelina Ramires","Jesus del Río","Alvaro Sanz","Javier Cuesta","Gonzalo García",
+"Jesus del Río","Alvaro Sanz","Javier Cuesta","Gonzalo García",
 "Carolina Cano","Patricia Garcías","Isaac Garcías","Maria Nieto","Carlos Ramos",
 "Alfonso Castillo","Alma Plana","Marcos Jimenez","Javier Rubio"
 ];
